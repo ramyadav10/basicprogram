@@ -2,61 +2,6 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
-interface ComputeWage{
-void addCompany(String name, int empRate, int totalWorkingDays, int maxHrsInMonth);
-void computeWage();
-int getTotalWageByCompanyName(String name);
-}
-class Company{
-   private String name;
-   private int empRate;
-   private int totalWorkingDays;
-   private int maxHrsInMonth;
-   private int totalEmpWage;
-public Company(){}
-
-public Company(final String name, final int empRate, final int totalWorkingDays, final int maxHrsInMonth){
-   this.name= name;
-   this.empRate= empRate;
-   this.totalWorkingDays= totalWorkingDays;
-   this.maxHrsInMonth= maxHrsInMonth;
-}
-public void setName(final String name){
-   this.name= name;
-}
-public String getName(){
-   return name;
-}
-public void setEmpRate(final int empRate){
-   this.empRate= empRate;
-}
-public int getEmpRate(){
-   return empRate;
-}
-public void setTotalWorkingDays(final int totalWorkingDays){
-   this.totalWorkingDays= totalWorkingDays;
-}
-public int getTotalWorkingDays(){
-   return totalWorkingDays;
-}
-public void setMaxHrsInMonth(final int maxHrsInMonth){
-   this.maxHrsInMonth= maxHrsInMonth;
-}
-public int getMaxHrsInMonth(){
-   return maxHrsInMonth;
-}
-public void setTotalEmpWage(final int totalEmpWage){
-   this.totalEmpWage= totalEmpWage;
-}
-public int getTotalEmpWage(){
-   return totalEmpWage;
-}
-//Overriding total employee wages
-@Override
-public String toString(){
-   return "Total Emp wage for: "+ name + ": "+ totalEmpWage;
-}
-}
 
 public class empWageUCFinal implements ComputeWage{
 
@@ -124,4 +69,62 @@ public static void main(String[] args){
 }
 
 }
+
+interface ComputeWage{
+void addCompany(String name, int empRate, int totalWorkingDays, int maxHrsInMonth);
+void computeWage();
+int getTotalWageByCompanyName(String name);
+}
+class Company{
+   private String name;
+   private int empRate;
+   private int totalWorkingDays;
+   private int maxHrsInMonth;
+   private int totalEmpWage;
+public Company(){}
+
+public Company(final String name, final int empRate, final int totalWorkingDays, final int maxHrsInMonth){
+   this.name= name;
+   this.empRate= empRate;
+   this.totalWorkingDays= totalWorkingDays;
+   this.maxHrsInMonth= maxHrsInMonth;
+}
+public void setName(final String name){
+   this.name= name;
+}
+public String getName(){
+   return name;
+}
+public void setEmpRate(final int empRate){
+   this.empRate= empRate;
+}
+public int getEmpRate(){
+   return empRate;
+}
+public void setTotalWorkingDays(final int totalWorkingDays){
+   this.totalWorkingDays= totalWorkingDays;
+}
+public int getTotalWorkingDays(){
+   return totalWorkingDays;
+}
+public void setMaxHrsInMonth(final int maxHrsInMonth){
+   this.maxHrsInMonth= maxHrsInMonth;
+}
+public int getMaxHrsInMonth(){
+   return maxHrsInMonth;
+}
+public void setTotalEmpWage(final int totalEmpWage){
+   this.totalEmpWage= totalEmpWage;
+}
+public int getTotalEmpWage(){
+   return totalEmpWage;
+}
+//Overriding total employee wages
+@Override
+public String toString(){
+   return "Total Emp wage for: "+ name + ": "+ totalEmpWage;
+}
+}
+
+
 
